@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+import os
+import platform
+import subprocess
+import sys
+
+def is_windows():
+    return platform.system() == "Windows"
+
+def activate_command():
+    """Returns the activation command based on the OS."""
+    if is_windows():
+        return os.path.join("venv", "Scripts", "activate.bat")
+    else:
+        return f"source venv/bin/activate"
+
+def create_venv():
+    """Creates the virtual environment if it doesn't exist."""
+    if not os.path.isdir("venv"):
+        print("Creating virtual environment...")
+        subprocess.check_call([sys.executable, "-m", "venv", "venv"])
+
+def install_requirements():
+    """Installs or updates the dependencies inside the virtual environment."""
+    print("Installing/Updating dependencies...")
+    python_executable = os.path.join("venv", "Scripts", "python") if is_windows() else "venv/bin/python"
+    subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip"])
+    subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "-r", "requirements.txt"])
+
+def main():
+    create_venv()
+    install_requirements()
+
+if __name__ == "__main__":
+    main()
