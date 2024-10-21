@@ -9,28 +9,33 @@ cd bio-calculator
 ```
 
 ## Setup:
-Make sure you have Chrome and the corresponding ChromeDriver installed. You can download the latest stable versions [here](https://googlechromelabs.github.io/chrome-for-testing/#stable).
+Make sure you have Google Chrome and the corresponding ChromeDriver installed. You can download the latest stable versions [here](https://googlechromelabs.github.io/chrome-for-testing/#stable).
 
-
+## Windows
 ```console
-python3 tools/setup
+C:Users\User>python tools\\setup
+```
+
+## Linux
+```console
+name@user:~$python3 tools/setup
 ```
 
 ## Run
 
 ### Windows
 ```console
-.\\venv\\Scripts\\activate
+C:Users\User>.\\venv\\Scripts\\activate
 
 ```
-```python
-python3 src/main.py
+```console
+C:Users\User>python3 src/main.py
 ```
 
 ### Linux
-```sh
-source venv/bin/activate
+```console
+name@user:~$source venv/bin/activate
 ```
-```python
-python3 src/main.py
+```console
+name@user:~$src/main.py
 ```
