@@ -21,12 +21,11 @@ def main():
      with open(links_file_path) as links_file:
           entries = filter(lambda str: str[0].isalpha(), links_file.readlines())
           entries = map(lambda str: str.strip(), entries)
-
           header = ""
           json = dict()
           for entry in entries:
                if entry.startswith("https://"):
-                    json[header] = entry
+                    json[header] = entry[:-1] if entry.endswith(("\n", "-", "-")) else entry
                     header = ""
                else:
                     header += entry
