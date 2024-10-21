@@ -7,14 +7,17 @@ https://www.ncbi.nlm.nih.gov/nuccore/AY544154.1
 Rat (Rattus rattus isolate M8):
 https://www.ncbi.nlm.nih.gov/nuccore/MT037597.1
 
-Mouse: https://www.ncbi.nlm.nih.gov/nuccore/KC617840.1
+Mouse: 
+https://www.ncbi.nlm.nih.gov/nuccore/KC617840.1
+
 Fruit fly (Zeugodacus cucurbitae bio-material BQ39):
-
 https://www.ncbi.nlm.nih.gov/nuccore/KT864822.1
-Nematode (Meloidogyne incognita isolate CN0008): 
 
+Nematode (Meloidogyne incognita isolate CN0008): 
 https://www.ncbi.nlm.nih.gov/nuccore/MT212717.1
-Pig (sus scrofa): https://www.ncbi.nlm.nih.gov/nuccore/KY661881.1
+
+Pig (sus scrofa):
+https://www.ncbi.nlm.nih.gov/nuccore/KY661881.1
 
 
 ***II For the transcript of the mRNA: ***
@@ -27,13 +30,16 @@ https://www.ncbi.nlm.nih.gov/nuccore/KR711257.1
 
 Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 2, mRNA:
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001354304.2
+
 Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 1, mRNA:
 https://www.ncbi.nlm.nih.gov/nuccore/NM_000277.3
+
 Homo sapiens phenylalanine hydroxylase (PAH) mRNA, complete cds:
 https://www.ncbi.nlm.nih.gov/nuccore/U49897.1
 
 PAH=phenylalanine hydroxylase {exon 9/10, mutant L333F} [human, lymphocytes, mRNA Partial Mutant, 79 nt]:
 https://www.ncbi.nlm.nih.gov/nuccore/S61396.1
+
 PAH=phenylalanine hydroxylase {exon 11/12, mutant E390G} [human, lymphocytes, mRNA Partial Mutant, 75 nt]
 https://www.ncbi.nlm.nih.gov/nuccore/S61296.1
 
