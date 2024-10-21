@@ -28,9 +28,13 @@ def install_requirements():
     subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip"])
     subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "-r", "requirements.txt"])
 
+def parse_links():
+    subprocess.check_call([os.path.join("venv", "Scripts", "python"), "tools/parse_links.py"])
+
 def main():
     create_venv()
     install_requirements()
+    parse_links()
 
 if __name__ == "__main__":
     main()
