@@ -10,7 +10,7 @@ links_dir = Path(os.path.join("data", "links"))
 def create_header_to_link_dictionary(file: Path) -> dict:
      with open(file) as links_file:
           entries = filter(lambda str: str[0].isalpha(), links_file.readlines())
-          entries = map(lambda str: str.rstrip(":-\n"), entries)
+          entries = map(lambda str: str.rstrip(":- \n"), entries)
           header = ""
           dictionary = dict()
           for entry in entries:

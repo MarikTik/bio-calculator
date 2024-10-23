@@ -12,10 +12,10 @@ import json
 def get_driver() -> webdriver.Chrome:
      """Initialize the WebDriver."""
      chrome_options = ChromeOptions()
-     chrome_options.headless = True  # Run without opening a window
-     chrome_options.add_argument("--no-sandbox")
-     chrome_options.add_argument("--disable-dev-shm-usage")
-     chrome_options.add_argument("--disable-gpu")
+     chrome_options.add_argument("--headless")
+     # chrome_options.add_argument("--no-sandbox")
+     # chrome_options.add_argument("--disable-dev-shm-usage")
+     # chrome_options.add_argument("--disable-gpu")
 
      return webdriver.Chrome(options=chrome_options)
 
