@@ -1,3 +1,5 @@
 venv
 data/links/links.json
 data/data.json
+**/__pycache__
+.vscode/**
