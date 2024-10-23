@@ -1,0 +1,20 @@
+Homo sapiens:
+https://www.ncbi.nlm.nih.gov/nuccore/KC750830.1
+
+Chimpanzee (Pan troglodytes):
+https://www.ncbi.nlm.nih.gov/nuccore/AY544154.1
+
+Rat (Rattus rattus isolate M8):
+https://www.ncbi.nlm.nih.gov/nuccore/MT037597.1
+
+Mouse: 
+https://www.ncbi.nlm.nih.gov/nuccore/KC617840.1
+
+Fruit fly (Zeugodacus cucurbitae bio-material BQ39):
+https://www.ncbi.nlm.nih.gov/nuccore/KT864822.1
+
+Nematode (Meloidogyne incognita isolate CN0008): 
+https://www.ncbi.nlm.nih.gov/nuccore/MT212717.1
+
+Pig (sus scrofa):
+https://www.ncbi.nlm.nih.gov/nuccore/KY661881.1
