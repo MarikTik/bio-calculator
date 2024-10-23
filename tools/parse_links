@@ -1,40 +1,50 @@
 #!/usr/bin/env python3
 import sys
+import os
 from json import dump
 from pathlib import Path
 
-default_links_path = "data/links/links.txt"
+links_dir = Path(os.path.join("data", "links"))
 
-def main():
-     if len(sys.argv) == 1:
-          links_file_dir = ""
-          links_file_path = default_links_path   
-     elif len(sys.argv) == 2:
-          links_file_dir = sys.argv[1]
-     elif len(sys.argv) == 3:
-          links_file_dir = sys.argv[1]
-          links_file_path = sys.argv[2]
-     else:
-          print("Usage: python3 parse_links.py [links_dir] [links_path]")
-          sys.exit(1)
-     
-     with open(links_file_path) as links_file:
+ 
+def create_header_to_link_dictionary(file: Path) -> dict:
+     with open(file) as links_file:
           entries = filter(lambda str: str[0].isalpha(), links_file.readlines())
-          entries = map(lambda str: str.strip(), entries)
+          entries = map(lambda str: str.rstrip(":-\n"), entries)
           header = ""
-          json = dict()
+          dictionary = dict()
           for entry in entries:
                if entry.startswith("https://"):
-                    header = header[:-1] if header.endswith(("\n", ":", "-")) else header
-                    json[header] = entry
+                    dictionary[header] = entry
                     header = ""
                else:
                     header += entry
-     if links_file_dir == "":
-          links_file_dir = Path(links_file_path).parent
+     return dictionary
 
-     with open(Path.joinpath(links_file_dir, "links.json"), "w") as json_file:
-          dump(json, json_file, indent=4)
+def assemble_links_json(links_dir: Path) -> dict:
+     dictionary = dict()
+     for links_file in links_dir.rglob("*.txt"):
+          dictionary[links_file.stem] = create_header_to_link_dictionary(links_file)
+     return dictionary
+
+def main():
+     dictionary = dict()
+     if len(sys.argv) == 2:
+          global links_dir
+          links_dir = Path(sys.argv[1])
+          if not links_dir.is_dir():
+               print(f"Directory {sys.argv[1]} does not exist.")
+               sys.exit(1)
+
+     elif len(sys.argv) != 1:
+          print("Usage: python3 parse_links.py [links_dir]")
+          sys.exit(1)
+
+     dictionary = assemble_links_json(links_dir)
+    
+
+     with open("venv/intermediate.json", "w") as intermediate_file:
+          dump(dictionary, intermediate_file, indent=4)
 
 if __name__ == '__main__':
      main()

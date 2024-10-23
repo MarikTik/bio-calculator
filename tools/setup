@@ -40,11 +40,15 @@ def parse_links():
 def download_data():
     subprocess.check_call([python_executable(), "tools/download_data"])
 
+def delete_intermediate_files():
+    os.remove("venv/intermediate.json")
+
 def main():
-    create_venv()
-    install_requirements()
+    #create_venv()
+    #install_requirements()
     parse_links()
     download_data()
+    delete_intermediate_files()
 
 if __name__ == "__main__":
     main()

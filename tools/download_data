@@ -38,9 +38,8 @@ def scrape_url(description: str, url: str) -> Dict:
      return {"description": description, "url": url, "genes": [span for span in spans]}
 
 def main():
-     with open("data/links/links.json") as json_file:
-          links = json.load(json_file)
-
+     with open("venv/intermediate.json") as json_file:
+     
           if len(sys.argv) == 1:
                max_processes = 10
           elif len(sys.argv) == 2:
@@ -49,8 +48,13 @@ def main():
                print("Usage: python download_data [max_processes]")
                sys.exit(1)
 
-          with Pool(processes=max_processes) as pool:
-               results = pool.starmap(scrape_url, links.items())
+          json_sections = json.load(json_file)
+          results = dict()
+          for section in json_sections:
+               links: dict = json_sections[section]
+
+               with Pool(processes=min(len(links), max_processes)) as pool:
+                    results[section] = pool.starmap(scrape_url, links.items())
 
           with open("data/data.json", "w") as data_file:
                json.dump(results, data_file, indent=4)
