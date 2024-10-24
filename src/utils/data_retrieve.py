@@ -24,3 +24,14 @@ def create_nucleobases_count_dictionary(genes_dictionary: Dict[str, str]) -> Dic
                nucleobases_count[nucleobase] += 1
           nucleobases_count_dictionary[carrier] = nucleobases_count
      return nucleobases_count_dictionary
+
+def get_reference_and_other_samples(
+     samples_nucleobases_count_dictionary: Dict[str, Dict[str, int]], reference_name: str
+) -> Dict[str, Dict[str, int]]:
+     """Extract reference sample and other animal samples."""
+     reference_nucleobases_count_dictionary = samples_nucleobases_count_dictionary.get(reference_name, None)
+     if not reference_nucleobases_count_dictionary:
+          raise KeyError(f"Unable to find {reference_name} in counted nucleotide dictionary")
+     
+     del samples_nucleobases_count_dictionary[reference_name]
+     return reference_nucleobases_count_dictionary, samples_nucleobases_count_dictionary
