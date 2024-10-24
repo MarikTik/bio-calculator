@@ -1,21 +1,23 @@
+Homo sapiens:
+https://www.ncbi.nlm.nih.gov/nuccore/KC750830.1
 
-Homo sapiens phenylalanine hydroxylase (PAH) mutant Q20stop mRNA:
+Individual 1 (Homo sapiens (phenylalanine hydroxylase (PAH) mutant Q20stop mRNA)):
 https://www.ncbi.nlm.nih.gov/nuccore/L47726.1
 
-Synthetic construct Homo sapiens clone CCSBHm_00021717 PAH (PAH) mRNA, encodes complete protein:
+Individual 2 (Synthetic construct Homo sapiens clone CCSBHm_00021717 PAH (PAH) mRNA, encodes complete protein):
 https://www.ncbi.nlm.nih.gov/nuccore/KR711257.1
 
-Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 2, mRNA:
+Individual 3 (Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 2, mRNA):
 https://www.ncbi.nlm.nih.gov/nuccore/NM_001354304.2
 
-Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 1, mRNA:
+Individual 4 (Homo sapiens phenylalanine hydroxylase (PAH), transcript variant 1, mRNA):
 https://www.ncbi.nlm.nih.gov/nuccore/NM_000277.3
 
-Homo sapiens phenylalanine hydroxylase (PAH) mRNA, complete cds:
+Individual 5 (Homo sapiens phenylalanine hydroxylase (PAH) mRNA, complete cds):
 https://www.ncbi.nlm.nih.gov/nuccore/U49897.1
 
-PAH=phenylalanine hydroxylase {exon 9/10, mutant L333F} [human, lymphocytes, mRNA Partial Mutant, 79 nt]:
+Individual 6 (PAH=phenylalanine hydroxylase {exon 9/10, mutant L333F} [human, lymphocytes, mRNA Partial Mutant, 79 nt]):
 https://www.ncbi.nlm.nih.gov/nuccore/S61396.1
 
-PAH=phenylalanine hydroxylase {exon 11/12, mutant E390G} [human, lymphocytes, mRNA Partial Mutant, 75 nt]
+Individual 7 (PAH=phenylalanine hydroxylase {exon 11/12, mutant E390G} [human, lymphocytes, mRNA Partial Mutant, 75 nt]):
 https://www.ncbi.nlm.nih.gov/nuccore/S61296.1
