@@ -1,4 +1,4 @@
-
+import plot_relational_graph
 
 if __name__ == "__main__":
-    pass
+    plot_relational_graph.main()
