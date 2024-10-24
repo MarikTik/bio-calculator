@@ -23,7 +23,7 @@ def plot_relational_percent_differences(percent_diff: np.ndarray, sample_names: 
     x = np.arange(len(sample_names)) 
     width = 0.15  
 
-    fig, ax = plt.subplots(figsize=(15, 10))
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     for i, base in enumerate(data_set.nucleobases):
         ax.bar(x + i * width, percent_diff[:, i], width, label=base)
