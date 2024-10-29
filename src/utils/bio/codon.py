@@ -10,20 +10,34 @@ class Codon:
           elif isinstance(other, Codon):
                return self.__eq__(other.codon)
           raise TypeError(f"Cannot compare Codon with {type(other)}")
+     
+     def __ne__(self, value: Union['Codon', str]) -> bool:
+          return not self.__eq__(value)
 
      def __hash__(self) -> int:
           return hash(codon_to_amino_acid[self.codon])
      
+     def __str__(self) -> str:
+          return self.codon.upper()
+     
+     def __repr__(self) -> str:
+          return self.codon
+     
+     def __lt__(self, other: 'Codon') -> bool:
+          return self.codon < other.codon
      @staticmethod
      def codons_count_map(gene: str) -> Dict['Codon', int]:
           triplets = [gene[i:i+3] for i in range(0, len(gene) - 2)]
+          
           codon_map = dict()
           for triplet in triplets:
-               codon = Codon(triplet)
-               if codon in codon_map:
-                    codon_map[codon] += 1
-               else:
-                    codon_map[codon] = 1
+               triplet = triplet.lower().strip()
+               if triplet in codon_to_amino_acid:
+                    codon = Codon(triplet)
+                    if codon in codon_map:
+                         codon_map[codon] += 1
+                    else:
+                         codon_map[codon] = 1
           return codon_map
 
 codon_associations = {
